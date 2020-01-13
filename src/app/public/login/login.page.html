@@ -1,0 +1,42 @@
+<ion-header class="login-header">
+  <!-- <ion-toolbar align-title="center"> -->
+  <!-- <ion-buttons slot="start">
+    </ion-buttons> -->
+  <img
+    class="title-image"
+    src="../../../assets/icon/org-logo.png"
+    width="200"
+  />
+  <!-- </ion-toolbar> -->
+</ion-header>
+<ion-content class="login-content">
+  <ion-item>
+    <ion-input
+      placeholder="User Name"
+      clearInput
+      [(ngModel)]="userName"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input
+      type="tel"
+      placeholder="Password"
+      type="password"
+      clearInput
+      [(ngModel)]="password"
+    ></ion-input>
+  </ion-item>
+  <ion-label [hidden]="frontendValidation" color="danger">
+    Please provide User Name and Password
+  </ion-label>
+  <ion-label [hidden]="backendValidation" color="danger">
+    Provided credentails are incorrect.
+  </ion-label>
+  <ion-button (click)="login()" expand="block">Login</ion-button>
+  <div class="forgot-password-text">
+    <!-- <a class="text-small" href="javascript:;">Forgot Password?</a> -->
+  </div>
+  <!-- <ion-label >
+    {{lurl}}
+  </ion-label> -->
+</ion-content>

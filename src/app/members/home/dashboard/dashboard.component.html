@@ -1,0 +1,42 @@
+<ion-content *blockUI="'dashboard'">
+  <ion-grid class="bg-grey">
+    <ion-row>
+      <ion-col col-6>
+        <ion-card class="card flexible" style="text-align: center;" (click)="goToPage1()">
+          <ion-img src="../../../assets/img/Form.png" class="img-responsive" width="50px" height="50px"></ion-img>
+          <h1>Page 1</h1>
+          <!-- <p>Expenses from this Month</p>
+          <p class="text-small">From {{dashboardData.monthly_expenses.count}} {{dashboardData.monthly_expenses.title}}</p> -->
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card class="card flexible" style="text-align: center;"  (click)="goToPage2()">
+          <ion-img src="../../../assets/img/Records.png" class="img-responsive" width="50px" height="50px"></ion-img>
+          <h1>Page 2</h1>
+          <!-- <p>Payments from this Month</p>
+          <p class="text-small">From {{dashboardData.monthly_payments.count}} {{dashboardData.monthly_payments.title}}</p> -->
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card class="card flexible" style="text-align: center;"  (click)="goToPage3()">
+          <ion-img src="../../../assets/img/AssignedToMe.png" class="img-responsive" width="50px" height="50px"></ion-img>
+          <h1>Page 3</h1>
+          <!-- <p>Expenses from this Month</p>
+          <p class="text-small">From {{dashboardData.monthly_expenses.count}} {{dashboardData.monthly_expenses.title}}</p> -->
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card class="card flexible" style="text-align: center;"  (click)="goToPage4()">
+          <ion-img src="../../../assets/img/SubmittedByMe.png" class="img-responsive" width="50px" height="50px"></ion-img>
+          <h1>Page 4</h1>
+          <!-- <p>Payments from this Month</p>
+          <p class="text-small">From {{dashboardData.monthly_payments.count}} {{dashboardData.monthly_payments.title}}</p> -->
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

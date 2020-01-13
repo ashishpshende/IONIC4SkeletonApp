@@ -1,0 +1,55 @@
+<div *ngIf="Action==AddAction ||Action== EditAction">
+    <ion-row>
+        <ion-label color="dark" class="ion-text-wrap">
+            {{field.Title}}
+        </ion-label>
+    </ion-row>
+    <ion-slides class="image-slider" loop="true" slidesPerView="5">
+        <ion-slide *ngFor="let image of field.CurrentValue">
+            <ion-row>
+                <ion-col col-12>
+                    <ion-card>
+                        <img [src]="image.Path" height='60' width='120'>
+                        <ion-row class="cardfooter">
+                            <ion-col>
+                                <ion-item>
+                                    <ion-label position="floating">Comment</ion-label>
+                                    <ion-input type="text" [(ngModel)]="image.Comment"></ion-input>
+                                </ion-item>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card>
+                </ion-col>
+                <ion-row>
+                    <ion-icon class="float-right" (click)="deleteImage(image)" name="remove-circle" style="zoom:2.0;">
+                    </ion-icon>
+                </ion-row>
+            </ion-row>
+        </ion-slide>
+    </ion-slides>
+    <ion-button [hidden]="!field.IsMultiselect && field.CurrentValue.length>0" (click)="presentAlert()">Upload
+    </ion-button>
+    {{this.imagePath }}
+</div>
+
+
+<div *ngIf="Action==ViewAction">
+    <div>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let image of field.CurrentValue">
+                <img [src]="image.ServerPath" class="img-responsive" alt="Cinque Terre">
+                <p><b>Comment : </b>{{image.Comment}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+

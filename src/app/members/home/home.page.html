@@ -1,0 +1,63 @@
+<ion-header class="main-header">
+  <ion-toolbar align-title="center">
+    <ion-buttons id="content" slot="start">
+      <ion-menu-button menuId="first" class="button"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <img class="title-image" src="../../../assets/icon/org-logo.png" width="140" />
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+<!-- Left Menu -->
+<ion-menu type="overlay" contentId="content" slot="start" menuId="first">
+  <ion-header>
+    <ion-toolbar color="light" text-left>
+
+<ion-row>
+  <ion-col size="4">
+  
+    <ion-img src="../../../assets/img/user.png" class="img-responsive" width="50px" height="50px"></ion-img>
+        <!-- <img src="../../../assets/img/Eclipse.gif" class="img-responsive" alt="Cinque Terre" width="100" height="100"> -->
+  </ion-col>
+  <ion-col size="8">
+  <ion-label>{{currentUser.Name}}</ion-label>
+  <p>{{ currentUser.Account?.Name }}</p>
+  </ion-col>
+  </ion-row>
+
+  
+   
+      
+     
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle auto-hide="false">
+        <ion-item value="Dashboard" class="menu:before" (click)="goToDashboard()">
+          <ion-icon slot="start" name="home"></ion-icon>
+          <ion-label>Dashboard</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      
+      <ion-menu-toggle auto-hide="false">
+      <ion-item value="Log Out" (click)="logout()">
+        <ion-icon slot="start" name="log-out"></ion-icon>
+          <ion-label>Log Out</ion-label>
+       
+      </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+  <ion-toolbar text-center>
+    <img src="../../../assets/icon/org-logo.png" width="140" />
+  </ion-toolbar>
+
+  <p text-center class="text-small">Version:0.0.0.1</p>
+</ion-menu>
+
+<ion-content *blockUI="'CreateFormInstance'">
+  <ion-router-outlet> </ion-router-outlet>
+</ion-content>

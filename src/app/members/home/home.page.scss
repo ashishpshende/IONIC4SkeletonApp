@@ -1,0 +1,81 @@
+.active-item {
+  border-left: 8px solid var(--ion-color-primary);
+}
+.height-500 {
+  height: 500px;
+  background-color: #eee;
+}
+.height-600 {
+  height: 600px;
+  background-color: #eee;
+}
+.height-700 {
+  height: 700px;
+  background-color: rgb(207, 204, 204);
+}
+.height-800 {
+  height: 800px;
+  background-color: #eee;
+}
+.height-900 {
+  height: 900px;
+  background-color: #eee;
+}
+.height-1000 {
+  height: 1000px;
+  background-color: #eee;
+}
+.logout-btn {
+  font-size: 22px;
+}
+ion-header.main-header {
+  background: #0caa41;
+  ion-toolbar {
+    --border-width: 0px;
+  }
+  ion-buttons,
+  ion-menu-button {
+    color: #777;
+  }
+}
+.menu:before {
+  margin: 0 5px;
+}
+ion-card.company-card {
+  margin: 0 0 2px 0;
+  background: #fff;
+  border-radius: 0px;
+  .grid-display {
+    display: grid;
+    grid-template-columns: 45px auto;
+    grid-gap: 15px;
+    align-items: center;
+  }
+  img {
+    border-radius: 100%;
+    width: 45px;
+  }
+  h3 {
+    margin: 0 0 4px 0;
+    color: #333;
+    font-size: 18px;
+  }
+  p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #777;
+  }
+}
+.home-tabs ion-segment {
+  --background-checked: none;
+  --color: #333;
+  --border-color: transparent;
+  justify-content: flex-start;
+  overflow-x: auto;
+  .segment-button-checked {
+    color: #6da44b;
+  }
+}
+.home-tabs .sc-ion-segment-md-hion-toolbar:not(.ion-color).sc-ion-segment-md-s > ion-segment-button, ion-toolbar .sc-ion-segment-md-h:not(.ion-color).sc-ion-segment-md-s > ion-segment-button {
+  font-size: 12px;
+}

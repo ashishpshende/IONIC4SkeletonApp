@@ -1,0 +1,7 @@
+{
+  "name": "Lookup Application",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
